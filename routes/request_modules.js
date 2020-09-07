@@ -1,6 +1,6 @@
 // var request = require('request');
 
-const url = 'https://auth.worksmobile.com/ba/kr1HVyrVZghvj/service/authorize?client_id=rPWfGZv9iELcTSY_PtAi&redirect_uri=https://sg-attend-hnnwp.run.goorm.io&state=123asda2e&domain=smithground.com';
+const url = 'https://auth.worksmobile.com/ba/kr1HVyrVZghvj/service/authorize?client_id=rPWfGZv9iELcTSY_PtAi&redirect_uri=https://sg-attend-hnnwp.run.goorm.io/todo&state=123asda2e&domain=smithground.com';
 var req_set;
 
 module.exports.req_post = function(rest_url, data) {
