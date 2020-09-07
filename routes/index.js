@@ -19,6 +19,7 @@ router.get('/todo', function(req, res, next) {
   //     res.send(body)
   //   }
   // })
+  res.render('todo', {title: 'smithground'})
 });
 
 module.exports = router;
