@@ -17,7 +17,8 @@ module.exports.req_post = function(rest_url, data) {
 
 module.exports.req_get = function () {
   req_set = {
-    url: url,
+    uri: url,
+    method: "GET",
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json;charset=UTF-8"
