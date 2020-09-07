@@ -10,13 +10,13 @@ router.get('/', function(req, res, next) {
 
 /* GET home page. */
 router.get('/todo', function(req, res, next) {
-  req_module.req_get();
-  console.log(req_module.req_get());
   request.get(req_module.req_get(), function (error, response, body) {
     if (error) {
       console.error(error);
     } else {
-      res.send(body);
+      console.log('--body--');
+      console.log(body);
+      res.render('todo', {title: 'smithground'})
     }
   })
   // res.render('todo', {title: 'smithground'})

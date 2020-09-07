@@ -1,6 +1,6 @@
 // var request = require('request');
 
-const url = 'https://sandbox-auth.worksmobile.com/ba/kr1HVyrVZghvj/service/authorize';
+const url = 'https://auth.worksmobile.com/ba/kr1HVyrVZghvj/service/authorize?client_id=rPWfGZv9iELcTSY_PtAi&redirect_uri=https://sg-attend-hnnwp.run.goorm.io&state=123asda2e&domain=smithground.com';
 var req_set;
 
 module.exports.req_post = function(rest_url, data) {
@@ -20,15 +20,7 @@ module.exports.req_get = function () {
     uri: url,
     headers: {
       "Content-Type": "application/json",
-      "Accept": "application/json;charset=UTF-8",
-      "consumerKey": "rPWfGZv9iELcTSY_PtAi",
-      "Authorzation": "Bearer Token"
-    },
-    form: {
-      "client_id": "rPWfGZv9iELcTSY_PtAi",
-      "redirect_uri": "https://sg-attend-hnnwp.run.goorm.io/todo",
-      "state": "iusf1kuahs82aszxc",
-      "domain": "smithground.com"
+      "Accept": "application/json;charset=UTF-8"
     }
   }
   return req_set
