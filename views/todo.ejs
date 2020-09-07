@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+</body>
+
+<script>
+  var consumerKey = "rPWfGZv9iELcTSY_PtAi";
+  var url = "https://sandbox-auth.worksmobile.com/oauth/authorize?client_id=" + consumerKey +
+    "&redirect_uri=https://smithground.com/todo" +
+    "&domain=smithground.com";
+
+  window.open(url, 'authorize', 'width=600px,height=800px');
+</script>
+
+</html>
