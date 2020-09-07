@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 router.get('/todo', function(req, res, next) {
   req_module.req_get();
   console.log(req_module.req_get());
-  request(req_module.req_get(), function (error, response, body) {
+  request.get(req_module.req_get(), function (error, response, body) {
     if (error) {
       console.error(error);
     } else {

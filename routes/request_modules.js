@@ -17,11 +17,12 @@ module.exports.req_post = function(rest_url, data) {
 
 module.exports.req_get = function () {
   req_set = {
-    uri: url,
-    method: "GET",
+    uri: url
     headers: {
       "Content-Type": "application/json",
-      "Accept": "application/json;charset=UTF-8"
+      "Accept": "application/json;charset=UTF-8",
+      "consumerKey": "rPWfGZv9iELcTSY_PtAi",
+      "Authorzation": "Bearer Token"
     },
     form: {
       "client_id": "rPWfGZv9iELcTSY_PtAi",
