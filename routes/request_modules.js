@@ -1,9 +1,6 @@
-var request = require('request');
+// var request = require('request');
 
-// Xpia Server
-const url_xpia = 'http://xiplug.keico.co.kr/';
-// Test Server
-const url_test = 'http://210.102.181.156:40006/';
+const url = 'https://sandbox-auth.worksmobile.com/ba/kr1HVyrVZghvj/service/authorize';
 var req_set;
 
 module.exports.req_post = function(rest_url, data) {
@@ -18,12 +15,18 @@ module.exports.req_post = function(rest_url, data) {
   return req_set
 }
 
-module.exports.req_get = function (rest_url) {
+module.exports.req_get = function () {
   req_set = {
-    url: url_xpia + rest_url,
+    url: url,
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json;charset=UTF-8"
+    },
+    form: {
+      "client_id": "rPWfGZv9iELcTSY_PtAi",
+      "redirect_uri": "https://sg-attend-hnnwp.run.goorm.io/todo",
+      "state": "iusf1kuahs82aszxc",
+      "domain": "smithground.com"
     }
   }
   return req_set
