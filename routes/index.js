@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
   var _url = req.url;
   console.log('---here---');
   var parsedData = parse(_url, true)
+  console.log(parsedData.query);
   console.log(parsedData.query.code);
 });
 
