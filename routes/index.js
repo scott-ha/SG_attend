@@ -2,22 +2,34 @@ var express = require('express');
 var router = express.Router();
 var req_module = require('./request_modules');
 var request = require('request');
+var url = require('url');
+const qs = require('querystring');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+  var _url = req.url;
+  console.log(_url);
 });
 
 /* GET home page. */
 router.get('/todo', function(req, res, next) {
   const requestToken = req.query.code;
-  request.get(req_module.req_get(), function (error, response, body) {
-    // console.log(requests);
+  request.get(req_module.req_get(), async function (error, response, body) {
     if (error) {
       console.log(error);
     }
-    console.log(body);
+    var req_data;
+    await console.log(qs.parse(body));
+    await console.log(request)
+    // {
+    //   req_data = qs.parse(body);
+    //   console.log(req_data);
+    // }
+
     res.end(body);
+    var _url = req.url;
+    // console.log(_url);
   })
   // console.log(requestToken);
   // var s_html = '<html>';
